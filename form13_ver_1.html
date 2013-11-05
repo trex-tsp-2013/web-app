@@ -97,13 +97,76 @@
         <div class="span9">
           <div class="well">
             <h2>แบบคำขอรับหนังสืออนุญาตนำเข้า ส่งออก นำผ่าน พืชอนุรักษ์หรือซากพืชอนุรักษ์ ตามพระราชบัญญัติพันธุ์พืช พ.ศ. 2518 (พ.พ.13)</h2><br><br>
-            <form action="" method="post">
-            <b>เขียนที่ (Place): </b><input class="input-xlarge" type="text" name="fplace"><br>
-            <b>วันที่ (Date): </b><input type="text" name="fdate"><br>
-            <b>ข้าพเจ้า (Mr./Mrs./Miss): </b><input class="input-xlarge" type="text" name="fname"><br>
-            <b>อายุ (Age): </b><input type="text" name="fage"><b>ปี</b><br> 
-            <b>สัญชาติ (Nationality): </b><input type="text" name="fnation"><br>
-            <b>ที่อยู่ (Address): </b><input class="input-xxlarge" type="text" name="faddress"><br>
+            
+            <?php echo form_open("pages/preview13");?>
+
+            <?
+              // check post if it is null value
+              if(isset($_POST['fplace'])) 
+                $fplace = $_POST['fplace'];
+              else 
+                $fplace = '';
+              if(isset($_POST['fdate'])) 
+                $fdate = $_POST['fdate'];
+              else 
+                $fdate = '';
+              if(isset($_POST['fname'])) 
+                $fname = $_POST['fname'];
+              else 
+                $fname = '';
+              if(isset($_POST['fage'])) 
+                $fage = $_POST['fage'];
+              else 
+                $fage = '';
+              if(isset($_POST['fnation'])) 
+                $fnation = $_POST['fnation'];
+              else 
+                $fnation = '';
+              if(isset($_POST['faddress'])) 
+                $faddress = $_POST['faddress'];
+              else 
+                $faddress = '';
+              if(isset($_POST['fname2'])) 
+                $fname2 = $_POST['fname2'];
+              else 
+                $fname2 = '';
+              if(isset($_POST['fname3'])) 
+                $fname3 = $_POST['fname3'];
+              else 
+                $fname3 = '';
+              if(isset($_POST['fnurse'])) 
+                $fnurse = $_POST['fnurse'];
+              else 
+                $fnurse = '';
+              if(isset($_POST['fnurseno'])) 
+                $fnurseno = $_POST['fnurseno'];
+              else 
+                $fnurseno = '';
+              if(isset($_POST['fvalue'])) 
+                $fvalue = $_POST['fvalue'];
+              else 
+                $fvalue = '';
+              if(isset($_POST['ftrans'])) 
+                $ftrans = $_POST['ftrans'];
+              else 
+                $ftrans = '';
+              if(isset($_POST['fentry'])) 
+                $fentry = $_POST['fentry'];
+              else 
+                $fentry = '';
+              if(isset($_POST['fdel'])) 
+                $fdel = $_POST['fdel'];
+              else 
+                $fdel = '';
+
+            ?>
+            <!-- <form action="" method="post"> -->
+            <b>เขียนที่ (Place): </b><input class="input-xlarge" type="text" name="fplace" value="<?echo $fplace;?>"><br>
+            <b>วันที่ (Date): </b><input type="text" name="fdate" value="<?echo $fdate;?>"><br>
+            <b>ข้าพเจ้า (Mr./Mrs./Miss): </b><input class="input-xlarge" type="text" name="fname" value="<?echo $fname;?>"><br>
+            <b>อายุ (Age): </b><input type="text" name="fage" value="<?echo $fage;?>"><b>ปี</b><br> 
+            <b>สัญชาติ (Nationality): </b><input type="text" name="fnation" value="<?echo $fnation;?>"><br>
+            <b>ที่อยู่ (Address): </b><input class="input-xxlarge" type="text" name="faddress" value="<?echo $faddress;?>"><br>
             <b>ขอรับหนังสืออนุญาต (เขียนเครื่องหมาย / ในช่อง[ ] ตามประเภทหนังสืออนุญาตที่ขอ)</b>
             <br>
             <b>request for permit (please check at appropriate boxes)</b>
@@ -118,11 +181,11 @@
             <b>สำหรับพืชอนุรักษ์หรือซากพืชอนุรักษ์ ดังรายการด้านหลัง (for live or dead conserved plants as listed overleaf)</b>
             <br>
             <br>
-            <b>ชื่อที่อยู่ผู้ส่ง (Name & Address of Permitee): </b><input type="text" name="fname2"><br>
-            <b>ชื่อที่อยู่ผู้รับ (Name & Address of Consignee): </b><input type="text" name="fname3"><br>
-            <b>ชื่อสถานที่เพาะเลี้ยงอนุรักษ์ (Name of Nursery Registration):<input class="input-xlarge" type="text" name="fnurse"> <br>เลขทะเบียน (Registration No.):<input class="input-xlarge" type="text" name="fnurseno."></b><br>
-            <b>มูลค่า (Values):<input class="input-xlarge" type="text" name="fvalue"> (บาท) <br>โดยพาหนะ (Means of Conveyance):<input class="input-xlarge" type="text" name="ftrans"></b><br>
-            <b>นำเข้าประเทศปลายทาง (Point of Entry):<input class="input-xlarge" type="text" name="fentry"> <br>ประมาณวันที่ (Date of delivery shipment):<input class="input-xlarge" type="text" name="fdel"></b>
+            <b>ชื่อที่อยู่ผู้ส่ง (Name & Address of Permitee): </b><input type="text" name="fname2" value="<?echo $fname2;?>"><br>
+            <b>ชื่อที่อยู่ผู้รับ (Name & Address of Consignee): </b><input type="text" name="fname3" value="<?echo $fname3;?>"><br>
+            <b>ชื่อสถานที่เพาะเลี้ยงอนุรักษ์ (Name of Nursery Registration):<input class="input-xlarge" type="text" name="fnurse" value="<?echo $fnurse;?>"> <br>เลขทะเบียน (Registration No.):<input class="input-xlarge" type="text" name="fnurseno" value="<?echo $fnurseno;?>"></b><br>
+            <b>มูลค่า (Values):<input class="input-xlarge" type="text" name="fvalue" value="<?echo $fvalue;?>"> (บาท) <br>โดยพาหนะ (Means of Conveyance):<input class="input-xlarge" type="text" name="ftrans" value="<?echo $ftrans;?>"></b><br>
+            <b>นำเข้าประเทศปลายทาง (Point of Entry):<input class="input-xlarge" type="text" name="fentry" value="<?echo $fentry;?>"> <br>ประมาณวันที่ (Date of delivery shipment):<input class="input-xlarge" type="text" name="fdel" value="<?echo $fdel;?>"></b>
             <br>
             <button type="submit" class="btn btn-large btn-primary">Submit</button>
             <button type="cancel" class="btn btn-large">Cancel</button>
