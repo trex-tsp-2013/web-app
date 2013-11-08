@@ -97,38 +97,125 @@
         <div class="span9">
           <div class="well">
             <h2>บัญชีแสดงจำนวนพืชอนุรักษ์ที่เปลี่ยนแปลงในรอบปีปฏิทิน</h2><br><br>
-            <form action="" method="post">
-            <b>ใบสำคัญการขึ้นทะเบียนสถานทีเพาะเลี้ยงพืชอนุรักษ์เลขทะเบียนที่: </b><input class="input-xlarge" type="text" name="numname"><br>
-            <b>ลงวันที่: </b><input class="input-xlarge" type="text" name="datename"><br>
 
-            <b>ตั้งแต่: </b><input class="input-xlarge" type="text" name="datename">
-            <b>ถึง 31 ธันวาคม พ.ศ.: </b><input class="input-xlarge" type="text" name="yearname"><br>
+            <?php echo form_open("pages/preview17");?>
+
+            <?
+              if(isset($_POST['nunname'])) 
+                $nunname = $_POST['nunname'];
+              else 
+                $nunname = '';
+              if(isset($_POST['fdate'])) 
+                $fdate = $_POST['fdate'];
+              else 
+                $fdate = '';
+              if(isset($_POST['fdate2'])) 
+                $fdate2 = $_POST['fdate2'];
+              else 
+                $fdate2 = '';
+              if(isset($_POST['fyear'])) 
+                $fyear = $_POST['fyear'];
+              else 
+                $fyear = '';
+              if(isset($_POST['plantname'])) 
+                $plantname = $_POST['plantname'];
+              else 
+                $plantname = '';
+              if(isset($_POST['sname'])) 
+                $sname = $_POST['sname'];
+              else 
+                $sname = '';
+              if(isset($_POST['numberbreed'])) 
+                $numberbreed = $_POST['numberbreed'];
+              else 
+                $numberbreed = '';
+              if(isset($_POST['numbercom'])) 
+                $numbercom = $_POST['numbercom'];
+              else 
+                $numbercom = '';
+              if(isset($_POST['source'])) 
+                $source = $_POST['source'];
+              else 
+                $source = '';
+              if(isset($_POST['ab'])) 
+                $ab = $_POST['ab'];
+              else 
+                $ab = '';
+              
+              if(isset($_POST['plantname2'])) 
+                $plantname2 = $_POST['plantname2'];
+              else 
+                $plantname2 = '';
+              if(isset($_POST['numberbreed2'])) 
+                $numberbreed2 = $_POST['numberbreed2'];
+              else 
+                $numberbreed2 = '';
+              if(isset($_POST['numbercom2'])) 
+                $numbercom2 = $_POST['numbercom2'];
+              else 
+                $numbercom2 = '';
+              if(isset($_POST['source2'])) 
+                $source2 = $_POST['source2'];
+              else 
+                $source2 = '';
+              if(isset($_POST['ab2'])) 
+                $ab2 = $_POST['ab2'];
+              else 
+                $ab2 = '';
+
+              if(isset($_POST['plantname3'])) 
+                $plantname3 = $_POST['plantname3'];
+              else 
+                $plantname3 = '';
+              if(isset($_POST['numberbreed3'])) 
+                $numberbreed3 = $_POST['numberbreed3'];
+              else 
+                $numberbreed3 = '';
+              if(isset($_POST['numbercom3'])) 
+                $numbercom3 = $_POST['numbercom3'];
+              else 
+                $numbercom3 = '';
+              if(isset($_POST['source3'])) 
+                $source3 = $_POST['source3'];
+              else 
+                $source3 = '';
+              if(isset($_POST['ab3'])) 
+                $ab3 = $_POST['ab3'];
+              else 
+                $ab3 = '';
+            ?>
+            <form action="" method="post">
+            <b>ใบสำคัญการขึ้นทะเบียนสถานทีเพาะเลี้ยงพืชอนุรักษ์เลขทะเบียนที่: </b><input class="input-xlarge" type="text" name="numname" value="<?echo $numname;?>"><br>
+            <b>ลงวันที่: </b><input class="input-xlarge" type="text" name="fdate" value="<?echo $fdate;?>"><br>
+
+            <b>ตั้งแต่: </b><input class="input-xlarge" type="text" name="fdate2" value="<?echo $fdate2;?>">
+            <b>ถึง 31 ธันวาคม พ.ศ.: </b><input class="input-xlarge" type="text" name="fyear" value="<?echo $fyear;?>"><br>
             <br>
             <b>ข้อ1. พืชอนุรักษ์ตามวงศ์และชนิดที่ระบุไว้ในบัญชีที่1 </b><br>
-            <b>ชื่อพืชอนุรักษ์: </b><input class="input-xlarge" type="text" name="plantname"><br>
-            <b>ชื่อวิทยาศาสตร์: </b><input class="input-xlarge" type="text" name="sname"><br>
-            <b>จำนวน พ่อ-แม่ พันธุ์: </b><input type="text" name="numberbreed"><br>
-            <b>จำนวนเพื่อการค้า: </b><input type="text" name="numbercom"><br>
-            <b>แหล่งที่มา(ที่ถูกต้องตามกฎหมาย): </b><input type="text" name="source"><br>
-            <b>วิธีการขยายพันธุ์เทียม: </b><input type="text" name="ab">
+            <b>ชื่อพืชอนุรักษ์: </b><input class="input-xlarge" type="text" name="plantname" value="<?echo $plantname;?>"><br>
+            <b>ชื่อวิทยาศาสตร์: </b><input class="input-xlarge" type="text" name="sname" value="<?echo $sname;?>"><br>
+            <b>จำนวน พ่อ-แม่ พันธุ์: </b><input type="text" name="numberbreed" value="<?echo $numberbreed;?>"><br>
+            <b>จำนวนเพื่อการค้า: </b><input type="text" name="numbercom" value="<?echo $numbercom;?>"><br>
+            <b>แหล่งที่มา(ที่ถูกต้องตามกฎหมาย): </b><input type="text" name="source" value="<?echo $source;?>"><br>
+            <b>วิธีการขยายพันธุ์เทียม: </b><input type="text" name="ab" value="<?echo $ab;?>">
             <br>
             <br>
             <b>ข้อ2. พืชอนุรักษ์ตามวงศ์และชนิดที่ระบุไว้ในบัญชีที่2 </b><br>
-            <b>ชื่อพืชอนุรักษ์: </b><input class="input-xlarge" type="text" name="plantname2"><br>
-            <b>ชื่อวิทยาศาสตร์: </b><input class="input-xlarge" type="text" name="sname2"><br>
-            <b>จำนวน พ่อ-แม่ พันธุ์: </b><input type="text" name="numberbreed2"><br>
-            <b>จำนวนเพื่อการค้า: </b><input type="text" name="numbercom2"><br>
-            <b>แหล่งที่มา(ที่ถูกต้องตามกฎหมาย): </b><input type="text" name="source2"><br>
-            <b>วิธีการขยายพันธุ์เทียม: </b><input type="text" name="ab2">
+            <b>ชื่อพืชอนุรักษ์: </b><input class="input-xlarge" type="text" name="plantname2" value="<?echo $plantname2;?>"><br>
+            <b>ชื่อวิทยาศาสตร์: </b><input class="input-xlarge" type="text" name="sname2" value="<?echo $sname2;?>"><br>
+            <b>จำนวน พ่อ-แม่ พันธุ์: </b><input type="text" name="numberbreed2" value="<?echo $numberbreed2;?>"><br>
+            <b>จำนวนเพื่อการค้า: </b><input type="text" name="numbercom2" value="<?echo $numbercom2;?>"><br>
+            <b>แหล่งที่มา(ที่ถูกต้องตามกฎหมาย): </b><input type="text" name="source2" value="<?echo $source2;?>"><br>
+            <b>วิธีการขยายพันธุ์เทียม: </b><input type="text" name="ab2" value="<?echo $ab2;?>">
             <br>
             <br>
             <b>ข้อ3. พืชอนุรักษ์ตามวงศ์และชนิดที่ระบุไว้ในบัญชีที่3 </b><br>
-            <b>ชื่อพืชอนุรักษ์: </b><input class="input-xlarge" type="text" name="plantname3"><br>
-            <b>ชื่อวิทยาศาสตร์: </b><input class="input-xlarge" type="text" name="sname3"><br>
-            <b>จำนวน พ่อ-แม่ พันธุ์: </b><input type="text" name="numberbreed3"><br>
-            <b>จำนวนเพื่อการค้า: </b><input type="text" name="numbercom3"><br>
-            <b>แหล่งที่มา(ที่ถูกต้องตามกฎหมาย): </b><input type="text" name="source3"><br>
-            <b>วิธีการขยายพันธุ์เทียม: </b><input type="text" name="ab3">
+            <b>ชื่อพืชอนุรักษ์: </b><input class="input-xlarge" type="text" name="plantname3" value="<?echo $plantname3;?>"><br>
+            <b>ชื่อวิทยาศาสตร์: </b><input class="input-xlarge" type="text" name="sname3" value="<?echo $sname3;?>"><br>
+            <b>จำนวน พ่อ-แม่ พันธุ์: </b><input type="text" name="numberbreed3" value="<?echo $numberbreed3;?>"><br>
+            <b>จำนวนเพื่อการค้า: </b><input type="text" name="numbercom3" value="<?echo $numbercom3;?>"><br>
+            <b>แหล่งที่มา(ที่ถูกต้องตามกฎหมาย): </b><input type="text" name="source3" value="<?echo $source3;?>"><br>
+            <b>วิธีการขยายพันธุ์เทียม: </b><input type="text" name="ab3" value="<?echo $ab3;?>">
             <br>
             <br>
             <br>
