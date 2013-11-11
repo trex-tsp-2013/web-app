@@ -98,8 +98,46 @@
           <div class="well">
             <h2>บัญชีเพิ่มหรือลดพืชอนุรักษ์ หรือจำนวนพ่อแม่พันธุ์</h2><br><br>
             <form action="" method="post">
-            <b>ใบสำคัญการขึ้นทะเบียนสถานทีเพาะเลี้ยงพืชอนุรักษ์เลขทะเบียนที่: </b><input class="input-xlarge" type="text" name="numname"><br>
-            <b>ลงวันที่: </b><input class="input-xlarge" type="text" name="datename"><br>
+            <?
+              // check post if it is null value
+              if(isset($form18['numname'])) 
+                $numname = $form18['numname'];
+              else 
+                $numname = '';
+              if(isset($form18['datename'])) 
+                $datename = $form18['datename'];
+              else 
+                $datename = '';
+              // for in put the check box idk how?
+              if(isset($form18['plantname'])) 
+                $plantname = $form18['plantname'];
+              else 
+                $plantname = '';
+              if(isset($form18['sname'])) 
+                $sname = $form18['sname'];
+              else 
+                $sname = '';
+              if(isset($form18['numberbreed'])) 
+                $numberbreed = $form18['numberbreed'];
+              else 
+                $numberbreed = '';
+              if(isset($form18['numbercom'])) 
+                $numbercom = $form18['numbercom'];
+              else 
+                $numbercom = '';
+              if(isset($form18['source'])) 
+                $source = $form18['source'];
+              else 
+                $source = '';
+              if(isset($form18['ab'])) 
+                $ab = $form18['ab'];
+              else 
+                $ab = '';
+
+              ?>
+
+            <b>ใบสำคัญการขึ้นทะเบียนสถานทีเพาะเลี้ยงพืชอนุรักษ์เลขทะเบียนที่: </b><input class="input-xlarge" type="text" name="numname" value="<?echo $numname;?>"><br>
+            <b>ลงวันที่: </b><input class="input-xlarge" type="text" name="datename" value="<?echo $datename;?>"><br>
             
             <b>เพื่อ: </b>
             <label class="checkbox-inline">
@@ -109,12 +147,12 @@
             <input type="checkbox" id="inlineCheckbox2" value="option2"> <b>การค้าต่างประเทศ</b>
             </label>
             
-            <b>ชื่อพืชอนุรักษ์: </b><input class="input-xlarge" type="text" name="plantname"><br>
-            <b>ชื่อวิทยาศาสตร์: </b><input class="input-xlarge" type="text" name="sname"><br>
-            <b>จำนวน พ่อ-แม่ พันธุ์: </b><input type="text" name="numberbreed"><br>
-            <b>จำนวนเพื่อการค้า: </b><input type="text" name="numbercom"><br>
-            <b>แหล่งที่มา(ที่ถูกต้องตามกฎหมาย): </b><input type="text" name="source"><br>
-            <b>วิธีการขยายพันธุ์เทียม: </b><input type="text" name="ab">
+            <b>ชื่อพืชอนุรักษ์: </b><input class="input-xlarge" type="text" name="plantname" value="<?echo $plantname;?>"><br>
+            <b>ชื่อวิทยาศาสตร์: </b><input class="input-xlarge" type="text" name="sname" value="<?echo $sname;?>"><br>
+            <b>จำนวน พ่อ-แม่ พันธุ์: </b><input type="text" name="numberbreed" value="<?echo $numberbreed;?>"><br>
+            <b>จำนวนเพื่อการค้า: </b><input type="text" name="numbercom" value="<?echo $numbercom;?>"><br>
+            <b>แหล่งที่มา(ที่ถูกต้องตามกฎหมาย): </b><input type="text" name="source" value="<?echo $source;?>"><br>
+            <b>วิธีการขยายพันธุ์เทียม: </b><input type="text" name="ab" value="<?echo $ab;?>">
             <br>
             <br>
             <br>
