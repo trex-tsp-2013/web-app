@@ -1,0 +1,445 @@
+<<<<<<< HEAD
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <title>TREX Corp.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="<?php echo base_url(); ?>assets/css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+      .sidebar-nav {
+        padding: 9px 0;
+      }
+
+      @media (max-width: 980px) {
+        /* Enable use of floated navbar text */
+        .navbar-text.pull-right {
+          float: none;
+          padding-left: 5px;
+          padding-right: 5px;
+        }
+      }
+    </style>
+    <link href="<?php echo base_url(); ?>assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="../assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="assets/ico/favicon.png">
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="<? echo base_url() ?>">TREX Corp.</a>
+          <div class="nav-collapse collapse">
+            <p class="navbar-text pull-right">
+              Logged in as <a href="#" class="navbar-link"><?echo $username;?></a>
+              <button onclick="location.href='<? echo site_url("auth/logout")?>'" class="btn btn-small btn-danger">Sign Out</button>
+            </p>
+
+            <ul class="nav">
+              <li><a href="<? echo base_url() ?>">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span3">
+          <div class="well sidebar-nav">
+            <ul class="nav nav-list">
+              <li class="nav-header"><h2>Form & Request</h2></li>
+              <li ><a href="#">การขึ้นทะเบียนสถานที่เพาะเลี้ยงพืชอนุรักษ์ และ ยื่นบัญชีแสดงจำนวนพืชอนุรักษ์</a></li>
+              <br>
+              <li class="active"><a href="#">การยื่นคำขอต่างๆ ที่เกี่ยวข้องกับใบสำคัญการขึ้นทะเบียนสถานที่เพาะเลี้ยง และ บัญชีพืชอนุรักษ์</a></li>
+              <br>
+              <li><a href="#">การขออนุญาตนำเข้า และนำเข้าล่วงหน้าพืชอนุรักษ์และซากพืชของพืชอนุรักษ์
+              ตามวงศ์และชนิดที่ระบุในบัญชี</a></li>
+              <br>
+              <li><a href="#">การขอใบอนุญาตส่งออก และส่งออกล่วงหน้าพืชอนุรักษ์หรือซากพืชอนุรักษ์</a></li>
+              <br>
+              <li><a href="#">การขออนุญาตนำผ่านพืชอนุรักษ์</a></li>
+              <br>
+              <li><a href="#">การออกหนังสือรับรองการส่งออกพืชลูกผสม</a></li>
+            </ul>
+          </div><!--/.well -->
+          <div class="well sidebar-nav">
+            <ul class="nav nav-list">
+              <li class="nav-header"><h2>Form Status</h2></li>
+              <li><a href="<? echo site_url("pages/status") ?>">คำขอล่าสุด</a></li>
+            </ul>
+          </div><!--/.well -->
+        </div><!--/span-->
+        <div class="span9">
+          <div class="well">
+            <h2>คำขอใบแทนใบ สำคัญการขึ้นทะเบียนสถานที่เพาะเลี้ยงพืชอนุรักษ์</h2><br><br>
+            <?php echo form_open("pages/preview13");?>
+
+            <?
+              // check post if it is null value
+              if(isset($form20['fname'])) 
+                $fname = $form20['fname'];
+              else 
+                $fname = '';
+              if(isset($form20['fbd'])) 
+                $fbd = $form20['fbd'];
+              else 
+                $fbd = '';
+              if(isset($form20['fnation'])) 
+                $fnation = $form20['fnation'];
+              else 
+                $fnation = '';
+              if(isset($form20['fpassport'])) 
+                $fpassport = $form20['fpassport'];
+              else 
+                $fpassport = '';
+              if(isset($form20['fissue'])) 
+                $fissue = $form20['fissue'];
+              else 
+                $fissue = '';
+              if(isset($form20['faddress'])) 
+                $faddress = $form20['faddress'];
+              else 
+                $faddress = '';
+              if(isset($form20['fstreet'])) 
+                $fstreet = $form20['fstreet'];
+              else 
+                $fstreet = '';
+              if(isset($form20['fprovince'])) 
+                $fprovince = $form20['fprovince'];
+              else 
+                $ffprovince = '';
+              if(isset($form20['fzipcode'])) 
+                $fzipcode = $form20['fzipcode'];
+              else 
+                $fzipcode = '';
+              if(isset($form20['ftel'])) 
+                $ftel = $form20['ftel'];
+              else 
+                $ftel = '';
+              if(isset($form20['fphone'])) 
+                $fphone = $form20['fphone'];
+              else 
+                $fphone = '';
+              if(isset($form20['ffax'])) 
+                $ffax = $form20['ffax'];
+              else 
+                $ffax = '';
+              if(isset($form20['tname'])) 
+                $tname = $form20['tname'];
+              else 
+                $tname = '';
+              if(isset($form20['fid'])) 
+                $fid = $form20['fid'];
+              else 
+                $fid = '';
+              if(isset($form20['fname2'])) 
+                $fname2 = $form20['fname2'];
+              else 
+                $fname2 = '';
+              if(isset($form20['faddress2'])) 
+                $faddress2 = $form20['faddress2'];
+              else 
+                $faddress2 = '';
+              if(isset($form20['fstreet2'])) 
+                $fstreet2 = $form20['fstreet2'];
+              else 
+                $fstreet2 = '';
+              if(isset($form20['fprovince2'])) 
+                $fprovince2 = $form20['fprovince2'];
+              else 
+                $ffprovince2 = '';
+              if(isset($form20['fzipcode2'])) 
+                $fzipcode2 = $form20['fzipcode2'];
+              else 
+                $fzipcode2 = '';
+              if(isset($form20['ftel2'])) 
+                $ftel2 = $form20['ftel2'];
+              else 
+                $ftel2 = '';
+              if(isset($form20['fphone2'])) 
+                $fphone2 = $form20['fphone2'];
+              else 
+                $fphone2 = '';
+              if(isset($form20['ffax2'])) 
+                $ffax2 = $form20['ffax2'];
+              else 
+                $ffax2 = '';
+              if(isset($form20['fname3'])) 
+                $fname3 = $form20['fname3'];
+              else 
+                $fname3 = '';
+              if(isset($form20['fcause'])) 
+                $fcause = $form20['fcause'];
+              else 
+                $fcause = '';
+            ?>
+            <form action="" method="post">
+            <b>ข้าพเจ้า: </b><input class="input-xlarge" type="text" name="fname" value="<?echo $fname;?>"> <br>
+            <b>วันเดือนปีเกิด: </b><input type="text" name="fbd" value="<?echo $fbd;?>"><br>
+            <b>สัญชาติ: </b><input type="text" name="fnation" value="<?echo $fnation;?>"><br>
+            <b>บัตรประจำตัวประชาชน / ใบสำคัญประจำตัวคนต่างด้าว เลขที่: </b><input class="input-xlarge" type="text" name="fpassport" value="<?echo $fpassport;?>"><br>
+            <b>ออกให้ ณ: </b><input type="text" name="fissue" value="<?echo $fissue;?>"><br>
+            <b>ที่อยู่: </b><input class="input-xxlarge" type="text" name="faddress" value="<?echo $faddress;?>"><br>
+            <b>ถนน: </b><input type="text" name="fstreet" value="<?echo $fstreet;?>"><br>
+            <b>จังหวัด: </b><input type="text" name="fprovince" value="<?echo $fprovince;?>"><br>
+            <b>รหัสไปรษณีย์: </b><input type="text" name="fzipcode" value="<?echo $fzipcode;?>"><br>
+            <b>โทรศัพท์: </b><input type="text" name="ftel" value="<?echo $ftel;?>"><br>
+            <b>โทรศัพท์เคลื่อนที่: </b><input type="text" name="fphone" value="<?echo $fphone;?>"><br>
+            <b>โทรสาร: </b><input type="text" name="ffax" value="<?echo $ffax;?>"><br>
+            <br>
+            <b>ขอรับใบแทนใบสำคัญการขึ้นทะเบียนสถานที่เพาะเลี้ยงพืชอนุรักษ์ </b><br>
+            <b>ชื่อ: </b><input type="text" name="tname" value="<?echo $tname;?>"><br>
+            <b>ตามใบสำคัญการขึ้นทะเบียนสถานที่เพาะเลี้ยงพืชอนุรักษ์เลขทะเบียนที่: </b><input type="text" name="fid" value="<?echo $fid;?>"><br>
+            <b>ในนามของ: </b><input type="text" name="fname2" value="<?echo $fname2;?>"><br>
+            <b>โดยมี: </b><input type="text" name="fname3" value="<?echo $fname3;?>"> <b>เป็นผู้ดำเนินกิจการ</b><br>
+            <b>ที่อยู่: </b><input class="input-xxlarge" type="text" name="faddress2" value="<?echo $faddress2;?>"><br>
+            <b>ถนน: </b><input type="text" name="fstreet2" value="<?echo $fstreet2;?>"><br>
+            <b>จังหวัด: </b><input type="text" name="fprovince2" value="<?echo $fprovince2;?>"><br>
+            <b>รหัสไปรษณีย์: </b><input type="text" name="fzipcode2" value="<?echo $fzipcode2;?>"><br>
+            <b>โทรศัพท์: </b><input type="text" name="ftel2" value="<?echo $ftel2;?>"><br>
+            <b>โทรศัพท์เคลื่อนที่: </b><input type="text" name="fphone2" value="<?echo $fphone2;?>"><br>
+            <b>โทรสาร: </b><input type="text" name="ffax2" value="<?echo $ffax2;?>"><br>
+            <br>
+            <b>เหตุผลที่ขอรับใบแทน: </b><br>
+            <textarea cols="10" rows="5" type="text" name"fcause" value="<?echo $fcause;?>"></textarea>
+
+
+             <table>
+            <tr>
+              <td>
+            <button type="submit" class="btn btn-large btn-primary" >Submit</button>
+            <?php echo form_close(); ?>
+              </td>
+              <td>
+            <?php echo form_open("pages");?><br>
+            <button type="cancel" class="btn btn-large">Cancel</button>
+            <?php echo form_close(); ?>
+              </td>
+            </tr>
+            <table>
+          
+      </div><!--/row-->
+    </div>
+      <hr>
+
+      <footer>
+        <p>© TREX Corp. 2013</p>
+      </footer>
+
+    </div><!--/.fluid-container-->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap-transition.js"></script>
+    <script src="assets/js/bootstrap-alert.js"></script>
+    <script src="assets/js/bootstrap-modal.js"></script>
+    <script src="assets/js/bootstrap-dropdown.js"></script>
+    <script src="assets/js/bootstrap-scrollspy.js"></script>
+    <script src="assets/js/bootstrap-tab.js"></script>
+    <script src="assets/js/bootstrap-tooltip.js"></script>
+    <script src="assets/js/bootstrap-popover.js"></script>
+    <script src="assets/js/bootstrap-button.js"></script>
+    <script src="assets/js/bootstrap-collapse.js"></script>
+    <script src="assets/js/bootstrap-carousel.js"></script>
+    <script src="assets/js/bootstrap-typeahead.js"></script>
+
+  
+
+=======
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <title>TREX Corp.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+      .sidebar-nav {
+        padding: 9px 0;
+      }
+
+      @media (max-width: 980px) {
+        /* Enable use of floated navbar text */
+        .navbar-text.pull-right {
+          float: none;
+          padding-left: 5px;
+          padding-right: 5px;
+        }
+      }
+    </style>
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="../assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="assets/ico/favicon.png">
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="#">TREX Corp.</a>
+          <div class="nav-collapse collapse">
+            <p class="navbar-text pull-right">
+              Logged in as <a href="#" class="navbar-link">Username</a>
+              <button class="btn btn-small btn-danger">Sign Out</button>
+            </p>
+
+            <ul class="nav">
+              <li><a href="#">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span3">
+          <div class="well sidebar-nav">
+            <ul class="nav nav-list">
+              <li class="nav-header"><h2>Form & Request</h2></li>
+              <li ><a href="#">การขึ้นทะเบียนสถานที่เพาะเลี้ยงพืชอนุรักษ์ และ ยื่นบัญชีแสดงจำนวนพืชอนุรักษ์</a></li>
+              <br>
+              <li class="active"><a href="#">การยื่นคำขอต่างๆ ที่เกี่ยวข้องกับใบสำคัญการขึ้นทะเบียนสถานที่เพาะเลี้ยง และ บัญชีพืชอนุรักษ์</a></li>
+              <br>
+              <li><a href="#">การขออนุญาตนำเข้า และนำเข้าล่วงหน้าพืชอนุรักษ์และซากพืชของพืชอนุรักษ์
+              ตามวงศ์และชนิดที่ระบุในบัญชี</a></li>
+              <br>
+              <li><a href="#">การขอใบอนุญาตส่งออก และส่งออกล่วงหน้าพืชอนุรักษ์หรือซากพืชอนุรักษ์</a></li>
+              <br>
+              <li><a href="#">การขออนุญาตนำผ่านพืชอนุรักษ์</a></li>
+              <br>
+              <li><a href="#">การออกหนังสือรับรองการส่งออกพืชลูกผสม</a></li>
+            </ul>
+          </div><!--/.well -->
+          <div class="well sidebar-nav">
+            <ul class="nav nav-list">
+              <li class="nav-header"><h2>Form Status</h2></li>
+              <li><a href="#">คำขอล่าสุด</a></li>
+            </ul>
+          </div><!--/.well -->
+        </div><!--/span-->
+        <div class="span9">
+          <div class="well">
+            <h2>คำขอใบแทนใบ สำคัญการขึ้นทะเบียนสถานที่เพาะเลี้ยงพืชอนุรักษ์</h2><br><br>
+            <form action="" method="post">
+            <b>ข้าพเจ้า: </b><input class="input-xlarge" type="text" name="fname"> <br>
+            <b>วันเดือนปีเกิด: </b><input type="text" name="fbd"><br>
+            <b>สัญชาติ: </b><input type="text" name="fnation"><br>
+            <b>บัตรประจำตัวประชาชน / ใบสำคัญประจำตัวคนต่างด้าว เลขที่: </b><input class="input-xlarge" type="text" name="fpassport"><br>
+            <b>ออกให้ ณ: </b><input type="text" name="fissue"><br>
+            <b>ที่อยู่: </b><input class="input-xxlarge" type="text" name="faddress"><br>
+            <b>ถนน: </b><input type="text" name="fstreet"><br>
+            <b>จังหวัด: </b><input type="text" name="fprovince"><br>
+            <b>รหัสไปรษณีย์: </b><input type="text" name="fzipcode"><br>
+            <b>โทรศัพท์: </b><input type="text" name="ftel"><br>
+            <b>โทรศัพท์เคลื่อนที่: </b><input type="text" name="fphone"><br>
+            <b>โทรสาร: </b><input type="text" name="ffax"><br>
+            <br>
+            <b>ขอรับใบแทนใบสำคัญการขึ้นทะเบียนสถานที่เพาะเลี้ยงพืชอนุรักษ์ </b><br>
+            <b>ชื่อ: </b><input type="text" name="tname"><br>
+            <b>ตามใบสำคัญการขึ้นทะเบียนสถานที่เพาะเลี้ยงพืชอนุรักษ์เลขทะเบียนที่: </b><input type="text" name="fid"><br>
+            <b>ในนามของ: </b><input type="text" name="fname2"><br>
+            <b>โดยมี: </b><input type="text" name="ffax"> <b>เป็นผู้ดำเนินกิจการ</b><br>
+            <b>ที่อยู่: </b><input class="input-xxlarge" type="text" name="faddress2"><br>
+            <b>ถนน: </b><input type="text" name="fstreet2"><br>
+            <b>จังหวัด: </b><input type="text" name="fprovince2"><br>
+            <b>รหัสไปรษณีย์: </b><input type="text" name="fzipcode2"><br>
+            <b>โทรศัพท์: </b><input type="text" name="ftel2"><br>
+            <b>โทรศัพท์เคลื่อนที่: </b><input type="text" name="fphone2"><br>
+            <b>โทรสาร: </b><input type="text" name="ffax2"><br>
+            <br>
+            <b>เหตุผลที่ขอรับใบแทน: </b><br>
+            <textarea cols="10" rows="5" type="text" name"fcause"></textarea>
+
+
+            <br>
+            <br>
+            <br>
+            <button type="submit" class="btn btn-large btn-primary">Submit</button>
+            <button type="cancel" class="btn btn-large">Cancel</button>
+            </form>
+          </div>
+          
+      </div><!--/row-->
+    </div>
+      <hr>
+
+      <footer>
+        <p>© TREX Corp. 2013</p>
+      </footer>
+
+    </div><!--/.fluid-container-->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap-transition.js"></script>
+    <script src="assets/js/bootstrap-alert.js"></script>
+    <script src="assets/js/bootstrap-modal.js"></script>
+    <script src="assets/js/bootstrap-dropdown.js"></script>
+    <script src="assets/js/bootstrap-scrollspy.js"></script>
+    <script src="assets/js/bootstrap-tab.js"></script>
+    <script src="assets/js/bootstrap-tooltip.js"></script>
+    <script src="assets/js/bootstrap-popover.js"></script>
+    <script src="assets/js/bootstrap-button.js"></script>
+    <script src="assets/js/bootstrap-collapse.js"></script>
+    <script src="assets/js/bootstrap-carousel.js"></script>
+    <script src="assets/js/bootstrap-typeahead.js"></script>
+
+  
+
+>>>>>>> 2107eaee720329f6d244ff66dbcec1a184324a58
+</body></html>
