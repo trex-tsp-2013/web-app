@@ -98,7 +98,7 @@
         <div class="span9">
           <div class="well">
             <h2>คำขอแก้ไขรายการใบสำคัญการขึ้นทะเบียน เพิ่ม/ลด สถานที่เพาะเลี้ยงพืชอนุรักษ์</h2><br><br>
-            
+            <?php echo form_open("pages/save21");?>
             <?
               // check post if it is null value
               if(isset($_POST['fname'])) 
@@ -282,7 +282,7 @@
             <b>โทรศัพท์: </b><input type="text" name="ftel2" value="<?echo $ftel2;?>"><br>
             <b>โทรศัพท์เคลื่อนที่: </b><input type="text" name="fphone2" value="<?echo $fphone2;?>">
             <b>โทรสาร: </b><input type="text" name="ffax2" value="<?echo $ffax2;?>"><br>
-            <b>ใบสำคัญการขึ้นทะเบียนสถานที่เพาะเลี้ยงพืชอนุรักษ์เลขทะเบียนที่</b><input type="text" name="fregisNum"><br>
+            <b>ใบสำคัญการขึ้นทะเบียนสถานที่เพาะเลี้ยงพืชอนุรักษ์เลขทะเบียนที่: </b><input type="text" name="fregisNum"><br>
             <br>
             <br>
             <input type="checkbox" name="ffix" value="fix">ขอแก้ไขรายการใบสำคัญการขึ้นทะเบียนสถานที่เพาะเลี้ยงพืชอนุรักษ์ดังกล่าวดังนี้<br>
@@ -310,10 +310,10 @@
             <br>
             <br>
             <br>
-            <b>ใบสำคัญเลขที่</b><input type="text" name="fimnum" value="<?echo $fimnum;?>"><br>
+            <b>ใบสำคัญเลขที่: </b><input type="text" name="fimnum" value="<?echo $fimnum;?>"><br>
             <br>
-            <b>ออกให้เมื่อวันที่</b><input type="date" name="fformdate" value="<?echo $fformdate;?>"><br>
-            <b>ิ้นอายุเมื่อวันที่</b><input type="date" name="fformenddate" value="<?echo $fformenddate;?>"><br>
+            <b>ออกให้เมื่อวันที: ่</b><input type="date" name="fformdate" value="<?echo $fformdate;?>"><br>
+            <b>สิ้นอายุในวันที่: </b><input type="date" name="fformenddate" value="<?echo $fformenddate;?>"><br>
             <br>
             <br>
             <button type="submit" class="btn btn-large btn-primary">Submit</button>
