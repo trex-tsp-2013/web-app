@@ -102,86 +102,86 @@
             <?php echo form_open("pages/preview17");?>
 
             <?
-              if(isset($form17['nunname'])) 
-                $nunname = $form17['nunname'];
+              if(isset($_POST['nunname'])) 
+                $nunname = $_POST['nunname'];
               else 
                 $nunname = '';
-              if(isset($form17['fdate'])) 
-                $fdate = $form17['fdate'];
+              if(isset($_POST['fdate'])) 
+                $fdate = $_POST['fdate'];
               else 
                 $fdate = '';
-              if(isset($form17['fdate2'])) 
-                $fdate2 = $form17['fdate2'];
+              if(isset($_POST['fdate2'])) 
+                $fdate2 = $_POST['fdate2'];
               else 
                 $fdate2 = '';
-              if(isset($form17['fyear'])) 
-                $fyear = $form17['fyear'];
+              if(isset($_POST['fyear'])) 
+                $fyear = $_POST['fyear'];
               else 
                 $fyear = '';
-              if(isset($form17['plantname'])) 
-                $plantname = $form17['plantname'];
+              if(isset($_POST['plantname'])) 
+                $plantname = $_POST['plantname'];
               else 
                 $plantname = '';
-              if(isset($form17['sname'])) 
-                $sname = $form17['sname'];
+              if(isset($_POST['sname'])) 
+                $sname = $_POST['sname'];
               else 
                 $sname = '';
-              if(isset($form17['numberbreed'])) 
-                $numberbreed = $form17['numberbreed'];
+              if(isset($_POST['numberbreed'])) 
+                $numberbreed = $_POST['numberbreed'];
               else 
                 $numberbreed = '';
-              if(isset($form17['numbercom'])) 
-                $numbercom = $form17['numbercom'];
+              if(isset($_POST['numbercom'])) 
+                $numbercom = $_POST['numbercom'];
               else 
                 $numbercom = '';
-              if(isset($form17['source'])) 
-                $source = $form17['source'];
+              if(isset($_POST['source'])) 
+                $source = $_POST['source'];
               else 
                 $source = '';
-              if(isset($form17['ab'])) 
-                $ab = $form17['ab'];
+              if(isset($_POST['ab'])) 
+                $ab = $_POST['ab'];
               else 
                 $ab = '';
               
-              if(isset($form17['plantname2'])) 
-                $plantname2 = $form17['plantname2'];
+              if(isset($_POST['plantname2'])) 
+                $plantname2 = $_POST['plantname2'];
               else 
                 $plantname2 = '';
-              if(isset($form17['numberbreed2'])) 
-                $numberbreed2 = $form17['numberbreed2'];
+              if(isset($_POST['numberbreed2'])) 
+                $numberbreed2 = $_POST['numberbreed2'];
               else 
                 $numberbreed2 = '';
-              if(isset($form17['numbercom2'])) 
-                $numbercom2 = $form17['numbercom2'];
+              if(isset($_POST['numbercom2'])) 
+                $numbercom2 = $_POST['numbercom2'];
               else 
                 $numbercom2 = '';
-              if(isset($form17['source2'])) 
-                $source2 = $form17['source2'];
+              if(isset($_POST['source2'])) 
+                $source2 = $_POST['source2'];
               else 
                 $source2 = '';
-              if(isset($form17['ab2'])) 
-                $ab2 = $form17['ab2'];
+              if(isset($_POST['ab2'])) 
+                $ab2 = $_POST['ab2'];
               else 
                 $ab2 = '';
 
-              if(isset($form17['plantname3'])) 
-                $plantname3 = $form17['plantname3'];
+              if(isset($_POST['plantname3'])) 
+                $plantname3 = $_POST['plantname3'];
               else 
                 $plantname3 = '';
-              if(isset($form17['numberbreed3'])) 
-                $numberbreed3 = $form17['numberbreed3'];
+              if(isset($_POST['numberbreed3'])) 
+                $numberbreed3 = $_POST['numberbreed3'];
               else 
                 $numberbreed3 = '';
-              if(isset($form17['numbercom3'])) 
-                $numbercom3 = $form17['numbercom3'];
+              if(isset($_POST['numbercom3'])) 
+                $numbercom3 = $_POST['numbercom3'];
               else 
                 $numbercom3 = '';
-              if(isset($form17['source3'])) 
-                $source3 = $form17['source3'];
+              if(isset($_POST['source3'])) 
+                $source3 = $_POST['source3'];
               else 
                 $source3 = '';
-              if(isset($form17['ab3'])) 
-                $ab3 = $form17['ab3'];
+              if(isset($_POST['ab3'])) 
+                $ab3 = $_POST['ab3'];
               else 
                 $ab3 = '';
             ?>

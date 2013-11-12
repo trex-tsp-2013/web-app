@@ -104,41 +104,41 @@
 
             <?
               // check post if it is null value
-              if(isset($form14['fname'])) 
-                $fname = $form14['fname'];
+              if(isset($_POST['fname'])) 
+                $fname = $_POST['fname'];
               else 
                 $fname = '';
-              if(isset($form14['faddress'])) 
-                $faddress = $form14['faddress'];
+              if(isset($_POST['faddress'])) 
+                $faddress = $_POST['faddress'];
               else 
                 $faddress = '';
-              if(isset($form14['fcountry'])) 
-                $fcountry = $form14['fcountry'];
+              if(isset($_POST['fcountry'])) 
+                $fcountry = $_POST['fcountry'];
               else 
                 $ffcountry = '';
-              if(isset($form14['fname2'])) 
-                $fname2 = $form14['fname2'];
+              if(isset($_POST['fname2'])) 
+                $fname2 = $_POST['fname2'];
               else 
                 $fname2 = '';
-              if(isset($form14['faddress2'])) 
-                $faddress2 = $form14['faddress2'];
+              if(isset($_POST['faddress2'])) 
+                $faddress2 = $_POST['faddress2'];
               else 
                 $faddress2 = '';
-              if(isset($form14['fcountry2'])) 
-                $fcountry2 = $form14['fcountry2'];
+              if(isset($_POST['fcountry2'])) 
+                $fcountry2 = $_POST['fcountry2'];
               else 
                 $fcountry2= '';
 
-              if(isset($form14['fcon'])) 
-                $fcon = $form14['fcon'];
+              if(isset($_POST['fcon'])) 
+                $fcon = $_POST['fcon'];
               else 
                 $fcon = '';
-              if(isset($form14['ftran'])) 
-                $ftran = $form14['ftran'];
+              if(isset($_POST['ftran'])) 
+                $ftran = $_POST['ftran'];
               else 
                 $ftran = '';
-              if(isset($form14['fau'])) 
-                $fau = $form14['fau'];
+              if(isset($_POST['fau'])) 
+                $fau = $_POST['fau'];
               else 
                 $fau = '';
               

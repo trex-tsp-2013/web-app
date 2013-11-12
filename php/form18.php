@@ -101,37 +101,37 @@
             <form action="" method="post">
             <?
               // check post if it is null value
-              if(isset($form18['numname'])) 
-                $numname = $form18['numname'];
+              if(isset($_POST['numname'])) 
+                $numname = $_POST['numname'];
               else 
                 $numname = '';
-              if(isset($form18['datename'])) 
-                $datename = $form18['datename'];
+              if(isset($_POST['datename'])) 
+                $datename = $_POST['datename'];
               else 
                 $datename = '';
               // for in put the check box idk how?
-              if(isset($form18['plantname'])) 
-                $plantname = $form18['plantname'];
+              if(isset($_POST['plantname'])) 
+                $plantname = $_POST['plantname'];
               else 
                 $plantname = '';
-              if(isset($form18['sname'])) 
-                $sname = $form18['sname'];
+              if(isset($_POST['sname'])) 
+                $sname = $_POST['sname'];
               else 
                 $sname = '';
-              if(isset($form18['numberbreed'])) 
-                $numberbreed = $form18['numberbreed'];
+              if(isset($_POST['numberbreed'])) 
+                $numberbreed = $_POST['numberbreed'];
               else 
                 $numberbreed = '';
-              if(isset($form18['numbercom'])) 
-                $numbercom = $form18['numbercom'];
+              if(isset($_POST['numbercom'])) 
+                $numbercom = $_POST['numbercom'];
               else 
                 $numbercom = '';
-              if(isset($form18['source'])) 
-                $source = $form18['source'];
+              if(isset($_POST['source'])) 
+                $source = $_POST['source'];
               else 
                 $source = '';
-              if(isset($form18['ab'])) 
-                $ab = $form18['ab'];
+              if(isset($_POST['ab'])) 
+                $ab = $_POST['ab'];
               else 
                 $ab = '';
 

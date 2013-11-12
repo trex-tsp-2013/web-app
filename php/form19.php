@@ -102,128 +102,128 @@
 
             <?
               // check post if it is null value
-              if(isset($form19['fname'])) 
-                $fname = $form19['fname'];
+              if(isset($_POST['fname'])) 
+                $fname = $_POST['fname'];
               else 
                 $fname = '';
-              if(isset($form19['fage'])) 
-                $fage = $form19['fage'];
+              if(isset($_POST['fage'])) 
+                $fage = $_POST['fage'];
               else 
                 $fage = '';
-              if(isset($form19['fnation'])) 
-                $fnation = $form19['fnation'];
+              if(isset($_POST['fnation'])) 
+                $fnation = $_POST['fnation'];
               else 
                 $fnation = '';
-              if(isset($form19['fpassport'])) 
-                $fpassport = $form19['fpassport'];
+              if(isset($_POST['fpassport'])) 
+                $fpassport = $_POST['fpassport'];
               else 
                 $fpassport = '';
-              if(isset($form19['fissue'])) 
-                $fissue = $form19['fissue'];
+              if(isset($_POST['fissue'])) 
+                $fissue = $_POST['fissue'];
               else 
                 $fissue = '';
-              if(isset($form19['faddress'])) 
-                $faddress = $form19['faddress'];
+              if(isset($_POST['faddress'])) 
+                $faddress = $_POST['faddress'];
               else 
                 $faddress = '';
-              if(isset($form19['fstreet'])) 
-                $fstreet = $form19['fstreet'];
+              if(isset($_POST['fstreet'])) 
+                $fstreet = $_POST['fstreet'];
               else 
                 $fstreet = '';
-              if(isset($form19['fprovince'])) 
-                $fprovince = $form19['fprovince'];
+              if(isset($_POST['fprovince'])) 
+                $fprovince = $_POST['fprovince'];
               else 
                 $ffprovince = '';
-              if(isset($form19['fzipcode'])) 
-                $fzipcode = $form19['fzipcode'];
+              if(isset($_POST['fzipcode'])) 
+                $fzipcode = $_POST['fzipcode'];
               else 
                 $fzipcode = '';
-              if(isset($form19['ftel'])) 
-                $ftel = $form19['ftel'];
+              if(isset($_POST['ftel'])) 
+                $ftel = $_POST['ftel'];
               else 
                 $ftel = '';
-              if(isset($form19['fphone'])) 
-                $fphone = $form19['fphone'];
+              if(isset($_POST['fphone'])) 
+                $fphone = $_POST['fphone'];
               else 
                 $fphone = '';
-              if(isset($form19['ffax'])) 
-                $ffax = $form19['ffax'];
+              if(isset($_POST['ffax'])) 
+                $ffax = $_POST['ffax'];
               else 
                 $ffax = '';
-              if(isset($form19['fmail'])) 
-                $fmail = $form19['fmail'];
+              if(isset($_POST['fmail'])) 
+                $fmail = $_POST['fmail'];
               else 
                 $fmail = '';
-              if(isset($form19['fnumber'])) 
-                $fnumber = $form19['fnumber'];
+              if(isset($_POST['fnumber'])) 
+                $fnumber = $_POST['fnumber'];
               else 
                 $fnumber = '';
-              if(isset($form19['fname2'])) 
-                $fname2 = $form19['fname2'];
+              if(isset($_POST['fname2'])) 
+                $fname2 = $_POST['fname2'];
               else 
                 $fname2 = '';
-              if(isset($form19['frname'])) 
-                $frname = $form19['frname'];
+              if(isset($_POST['frname'])) 
+                $frname = $_POST['frname'];
               else 
                 $frname = '';
-              if(isset($form19['faddress2'])) 
-                $faddress2 = $form19['faddress2'];
+              if(isset($_POST['faddress2'])) 
+                $faddress2 = $_POST['faddress2'];
               else 
                 $faddress2 = '';
-              if(isset($form19['fstreet2'])) 
-                $fstreet2 = $form19['fstreet2'];
+              if(isset($_POST['fstreet2'])) 
+                $fstreet2 = $_POST['fstreet2'];
               else 
                 $fstreet2 = '';
-              if(isset($form19['fprovince2'])) 
-                $fprovince2 = $form19['fprovince2'];
+              if(isset($_POST['fprovince2'])) 
+                $fprovince2 = $_POST['fprovince2'];
               else 
                 $ffprovince2 = '';
-              if(isset($form19['fzipcode2'])) 
-                $fzipcode2 = $form19['fzipcode2'];
+              if(isset($_POST['fzipcode2'])) 
+                $fzipcode2 = $_POST['fzipcode2'];
               else 
                 $fzipcode2 = '';
-              if(isset($form19['ftel2'])) 
-                $ftel2 = $form19['ftel2'];
+              if(isset($_POST['ftel2'])) 
+                $ftel2 = $_POST['ftel2'];
               else 
                 $ftel2 = '';
-              if(isset($form19['fphone2'])) 
-                $fphone2 = $form19['fphone2'];
+              if(isset($_POST['fphone2'])) 
+                $fphone2 = $_POST['fphone2'];
               else 
                 $fphone2 = '';
-              if(isset($form19['ffax2'])) 
-                $ffax2 = $form19['ffax2'];
+              if(isset($_POST['ffax2'])) 
+                $ffax2 = $_POST['ffax2'];
               else 
                 $ffax2 = '';
-              if(isset($form19['fname3'])) 
-                $fname3 = $form19['fname3'];
+              if(isset($_POST['fname3'])) 
+                $fname3 = $_POST['fname3'];
               else 
                 $fname3 = '';
-              if(isset($form19['faddress3'])) 
-                $faddress3 = $form19['faddress3'];
+              if(isset($_POST['faddress3'])) 
+                $faddress3 = $_POST['faddress3'];
               else 
                 $faddress3 = '';
-              if(isset($form19['fstreet3'])) 
-                $fstreet3 = $form19['fstreet3'];
+              if(isset($_POST['fstreet3'])) 
+                $fstreet3 = $_POST['fstreet3'];
               else 
                 $fstreet3 = '';
-              if(isset($form19['fprovince3'])) 
-                $fprovince3 = $form19['fprovince3'];
+              if(isset($_POST['fprovince3'])) 
+                $fprovince3 = $_POST['fprovince3'];
               else 
                 $ffprovince3 = '';
-              if(isset($form19['fzipcode3'])) 
-                $fzipcode3 = $form19['fzipcode3'];
+              if(isset($_POST['fzipcode3'])) 
+                $fzipcode3 = $_POST['fzipcode3'];
               else 
                 $fzipcode3 = '';
-              if(isset($form19['ftel3'])) 
-                $ftel3 = $form19['ftel3'];
+              if(isset($_POST['ftel3'])) 
+                $ftel3 = $_POST['ftel3'];
               else 
                 $ftel3 = '';
-              if(isset($form19['fphone3'])) 
-                $fphone3 = $form19['fphone3'];
+              if(isset($_POST['fphone3'])) 
+                $fphone3 = $_POST['fphone3'];
               else 
                 $fphone3 = '';
-              if(isset($form19['ffax3'])) 
-                $ffax3 = $form19['ffax3'];
+              if(isset($_POST['ffax3'])) 
+                $ffax3 = $_POST['ffax3'];
               else 
                 $ffax3 = '';
             ?>
