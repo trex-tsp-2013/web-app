@@ -246,6 +246,14 @@
                 $ab = $form15['ab'];
               else 
                 $ab = '';
+              if(isset($form15['fdates'])) 
+                $fdates = $form15['fdates'];
+              else 
+                $fdates = '';
+              if(isset($form15['fdatee'])) 
+                $fdatee = $form15['fdatee'];
+              else 
+                $fdatee = '';
               // if(isset($form15['comment'])) 
               //   $comment = $form15['comment'];
               // else 
@@ -358,10 +366,10 @@
 
             <br>
             <br>
-            <? $fstreet2 = $form15['fstreet2']; ?>
-            <b>ใบสำคัญฉบับนี้ออกให้เมื่อวันที่: </b><span style="color:blue"><?echo $form15["fstreet2"];?></span><br>
-            <? $ffax3 = $form15['ffax3']; ?>
-            <b>โดยให้ใช้ถึงวันที่: </b><span style="color:blue"><?echo $form15["ffax3"];?></span><br>
+            <? $fstreet2 = $form15['fdates']; ?>
+            <b>ใบสำคัญฉบับนี้ออกให้เมื่อวันที่: </b><span style="color:blue"><?echo $form15["fdates"];?></span><br>
+            <? $ffax3 = $form15['fdatee']; ?>
+            <b>โดยให้ใช้ถึงวันที่: </b><span style="color:blue"><?echo $form15["fdatee"];?></span><br>
             <b>และให้ใช้ได้เฉพาะสถานที่ซึ่งระบุไว้ในใบสำคัญนี้เท่านั้น</b>
 
 

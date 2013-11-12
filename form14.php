@@ -25,7 +25,8 @@
         }
       }
     </style>
-    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+   <link href="<?php echo base_url(); ?>assets/css/bootstrap-responsive.css" rel="stylesheet">
+
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -50,15 +51,16 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="brand" href="#">TREX Corp.</a>
+          <a class="brand" href="<? echo base_url() ?>">TREX Corp.</a>
           <div class="nav-collapse collapse">
             <p class="navbar-text pull-right">
-              Logged in as <a href="#" class="navbar-link">Username</a>
-              <button class="btn btn-small btn-danger">Sign Out</button>
+              Logged in as <a href="#" class="navbar-link"><?echo $username;?></a>
+              <!-- <button onclick="location.href='http://localhost/trex_cites/index.php/auth/logout'" class="btn btn-small btn-danger">Sign Out</button> -->
+              <button onclick="location.href='<? echo site_url("auth/logout")?>'" class="btn btn-small btn-danger">Sign Out</button>
             </p>
 
             <ul class="nav">
-              <li><a href="#">Home</a></li>
+              <li><a href="<? echo base_url() ?>">Home</a></li>
               <li><a href="#about">About</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
@@ -90,17 +92,68 @@
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
               <li class="nav-header"><h2>Form Status</h2></li>
-              <li><a href="#">คำขอล่าสุด</a></li>
+              <li><a href="<? echo site_url("pages/status") ?>">คำขอล่าสุด</a></li>
             </ul>
           </div><!--/.well -->
         </div><!--/span-->
         <div class="span9">
           <div class="well">
+
+
+
+
+            <?
+              // check post if it is null value
+              if(isset($form14['fname'])) 
+                $fname = $form14['fname'];
+              else 
+                $fname = '';
+              if(isset($form14['faddress'])) 
+                $faddress = $form14['faddress'];
+              else 
+                $faddress = '';
+              if(isset($form14['fstreet'])) 
+                $fstreet = $form14['fstreet'];
+              else 
+                $fstreet = '';
+              if(isset($form14['fname4'])) 
+                $fname4 = $form14['fname4'];
+              else 
+                $fname4 = '';
+              if(isset($form14['faddress4'])) 
+                $faddress4 = $form14['faddress4'];
+              else 
+                $faddress4 = '';
+              if(isset($form14['fstreet4'])) 
+                $fstreet4 = $form14['fstreet4'];
+              else 
+                $fstreet4 = '';
+
+              if(isset($form14['fmail'])) 
+                $fmail = $form14['fmail'];
+              else 
+                $fmail = '';
+              if(isset($form14['fmail2'])) 
+                $fmail2 = $form14['fmail2'];
+              else 
+                $fmail2 = '';
+              if(isset($form14['fmail3'])) 
+                $fmail3 = $form14['fmail3'];
+              else 
+                $fmail3 = '';
+              
+              // if(isset($form15['comment'])) 
+              //   $comment = $form15['comment'];
+              // else 
+              //   $comment = '';
+              ?>
+
+
             <h2>แบบ พ.พ.14</h2><br><br>
             <form action="" method="post">
             <p>
               <label>
-                <input type="radio" name="RadioGroup1" value="1" id="RadioGroup1_0">
+                <input type="radio" name="RadioGroup1" value="1" id="RadioGroup1_0" >
                 IMPORT PERMIT</label>
               <br>
               <label>
@@ -118,40 +171,54 @@
             <hr>
             <h2><em>Consignee Information            </em></h2>
             <p><b>Name: </b>
-              <input class="input-xlarge" type="text" name="fname"><br>
+              <input class="input-xlarge" type="text" name="fname" value="<?echo $fname;?>">
               <b>Address: </b>
-              <input class="input-xxlarge" type="text" name="faddress"><br>
+              <input class="input-xxlarge" type="text" name="faddress" value="<?echo $faddress;?>"><br>
+
               <b>Country: </b>
-              <input type="text" name="fstreet">
+              <input type="text" name="fstreet" value="<?echo $fstreet;?>">
+              
             </p>
             <hr>
             <h2><em>Permittee Information</em></h2>
             <p><b>Name: </b>
-              <input class="input-xlarge" type="text" name="fname4">
+              <input class="input-xlarge" type="text" name="fname4" value="<?echo $fname4;?>">
               <br>
-              <b>Address: </b>
-              <input class="input-xxlarge" type="text" name="faddress4">
+              <b>Address: </b> 
+              <input class="input-xxlarge" type="text" name="faddress4" value="<?echo $faddress4;?>">
               <br>
               <b>Country: </b>
-              <input type="text" name="fstreet4">
+              <input type="text" name="fstreet4" value="<?echo $fstreet4;?>">
             </p>
             <hr>
             <br>
-              <b>Special conditions: </b>
-              <input class="input-xxlarge" type="text" name="fmail">
+            <b>Special conditions: </b>
+            <input class="input-xxlarge" type="text" name="fmail" value="<?echo $fmail;?>">
             <br>
             <b>Purpose of the transaction: </b>
-            <input class="input-xxlarge" type="text" name="fmail2">
+            <input class="input-xxlarge" type="text" name="fmail2" value="<?echo $fmail2;?>">
             <br>
             <b>Management Authority: </b>
-            <input class="input-xxlarge" type="text" name="fmail3">
+            <input class="input-xxlarge" type="text" name="fmail3" value="<?echo $fmail3;?>">
             * according to database 7-12 is to be discuss later hot to implement<br>
             ** Note that according to the standard form number 13+14 should be fill by the officer<br>
             <br>
-            <button type="submit" class="btn btn-large btn-primary">Submit</button>
+
+             <table>
+            <tr>
+              <td>
+            <button type="submit" class="btn btn-large btn-primary" >Submit</button>
+            <?php echo form_close(); ?>
+              </td>
+              <td>
+            <?php echo form_open("pages");?><br>
             <button type="cancel" class="btn btn-large">Cancel</button>
-            </form>
-          </div>
+            <?php echo form_close(); ?>
+              </td>
+            </tr>
+            <table>
+
+
           
       </div><!--/row-->
     </div>
