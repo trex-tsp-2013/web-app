@@ -6,7 +6,7 @@
     <meta name="author" content="">
 
     <!-- Le styles -->
-    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>assets/css/bootstrap.css" rel="stylesheet">
     <style type="text/css">
       body {
         padding-top: 60px;
@@ -102,60 +102,60 @@
 
             <?
               // check post if it is null value
-              if(isset($form13['fplace'])) 
-                $fplace = $form13['fplace'];
+              if(isset($_POST['fplace'])) 
+                $fplace = $_POST['fplace'];
               else 
                 $fplace = '';
-              if(isset($form13['fdate'])) 
-                $fdate = $form13['fdate'];
+              if(isset($_POST['fdate'])) 
+                $fdate = $_POST['fdate'];
               else 
                 $fdate = '';
-              if(isset($form13['fname'])) 
-                $fname = $form13['fname'];
+              if(isset($_POST['fname'])) 
+                $fname = $_POST['fname'];
               else 
                 $fname = '';
-              if(isset($form13['fage'])) 
-                $fage = $form13['fage'];
+              if(isset($_POST['fage'])) 
+                $fage = $_POST['fage'];
               else 
                 $fage = '';
-              if(isset($form13['fnation'])) 
-                $fnation = $form13['fnation'];
+              if(isset($_POST['fnation'])) 
+                $fnation = $_POST['fnation'];
               else 
                 $fnation = '';
-              if(isset($form13['faddress'])) 
-                $faddress = $form13['faddress'];
+              if(isset($_POST['faddress'])) 
+                $faddress = $_POST['faddress'];
               else 
                 $faddress = '';
-              if(isset($form13['fname2'])) 
-                $fname2 = $form13['fname2'];
+              if(isset($_POST['fname2'])) 
+                $fname2 = $_POST['fname2'];
               else 
                 $fname2 = '';
-              if(isset($form13['fname3'])) 
-                $fname3 = $form13['fname3'];
+              if(isset($_POST['fname3'])) 
+                $fname3 = $_POST['fname3'];
               else 
                 $fname3 = '';
-              if(isset($form13['fnurse'])) 
-                $fnurse = $form13['fnurse'];
+              if(isset($_POST['fnurse'])) 
+                $fnurse = $_POST['fnurse'];
               else 
                 $fnurse = '';
-              if(isset($form13['fnurseno'])) 
-                $fnurseno = $form13['fnurseno'];
+              if(isset($_POST['fnurseno'])) 
+                $fnurseno = $_POST['fnurseno'];
               else 
                 $fnurseno = '';
-              if(isset($form13['fvalue'])) 
-                $fvalue = $form13['fvalue'];
+              if(isset($_POST['fvalue'])) 
+                $fvalue = $_POST['fvalue'];
               else 
                 $fvalue = '';
-              if(isset($form13['ftrans'])) 
-                $ftrans = $form13['ftrans'];
+              if(isset($_POST['ftrans'])) 
+                $ftrans = $_POST['ftrans'];
               else 
                 $ftrans = '';
-              if(isset($form13['fentry'])) 
-                $fentry = $form13['fentry'];
+              if(isset($_POST['fentry'])) 
+                $fentry = $_POST['fentry'];
               else 
                 $fentry = '';
-              if(isset($form13['fdel'])) 
-                $fdel = $form13['fdel'];
+              if(isset($_POST['fdel'])) 
+                $fdel = $_POST['fdel'];
               else 
                 $fdel = '';
 
