@@ -112,35 +112,35 @@
                 $faddress = $form14['faddress'];
               else 
                 $faddress = '';
-              if(isset($form14['fstreet'])) 
-                $fstreet = $form14['fstreet'];
+              if(isset($form14['fcountry'])) 
+                $fcountry = $form14['fcountry'];
               else 
-                $fstreet = '';
-              if(isset($form14['fname4'])) 
-                $fname4 = $form14['fname4'];
+                $ffcountry = '';
+              if(isset($form14['fname2'])) 
+                $fname2 = $form14['fname2'];
               else 
-                $fname4 = '';
-              if(isset($form14['faddress4'])) 
-                $faddress4 = $form14['faddress4'];
+                $fname2 = '';
+              if(isset($form14['faddress2'])) 
+                $faddress2 = $form14['faddress2'];
               else 
-                $faddress4 = '';
-              if(isset($form14['fstreet4'])) 
-                $fstreet4 = $form14['fstreet4'];
+                $faddress2 = '';
+              if(isset($form14['fcountry2'])) 
+                $fcountry2 = $form14['fcountry2'];
               else 
-                $fstreet4 = '';
+                $fcountry2= '';
 
-              if(isset($form14['fmail'])) 
-                $fmail = $form14['fmail'];
+              if(isset($form14['fcon'])) 
+                $fcon = $form14['fcon'];
               else 
-                $fmail = '';
-              if(isset($form14['fmail2'])) 
-                $fmail2 = $form14['fmail2'];
+                $fcon = '';
+              if(isset($form14['ftran'])) 
+                $ftran = $form14['ftran'];
               else 
-                $fmail2 = '';
-              if(isset($form14['fmail3'])) 
-                $fmail3 = $form14['fmail3'];
+                $ftran = '';
+              if(isset($form14['fau'])) 
+                $fau = $form14['fau'];
               else 
-                $fmail3 = '';
+                $fau = '';
               
               // if(isset($form15['comment'])) 
               //   $comment = $form15['comment'];
@@ -176,30 +176,30 @@
               <input class="input-xxlarge" type="text" name="faddress" value="<?echo $faddress;?>"><br>
 
               <b>Country: </b>
-              <input type="text" name="fstreet" value="<?echo $fstreet;?>">
+              <input type="text" name="fcountry" value="<?echo $fcountry;?>">
               
             </p>
             <hr>
             <h2><em>Permittee Information</em></h2>
             <p><b>Name: </b>
-              <input class="input-xlarge" type="text" name="fname4" value="<?echo $fname4;?>">
+              <input class="input-xlarge" type="text" name="fname2" value="<?echo $fname2;?>">
               <br>
               <b>Address: </b> 
-              <input class="input-xxlarge" type="text" name="faddress4" value="<?echo $faddress4;?>">
+              <input class="input-xxlarge" type="text" name="faddress2" value="<?echo $faddress2;?>">
               <br>
               <b>Country: </b>
-              <input type="text" name="fstreet4" value="<?echo $fstreet4;?>">
+              <input type="text" name="fcountry2" value="<?echo $fcountry2;?>">
             </p>
             <hr>
             <br>
             <b>Special conditions: </b>
-            <input class="input-xxlarge" type="text" name="fmail" value="<?echo $fmail;?>">
+            <input class="input-xxlarge" type="text" name="fcon" value="<?echo $fcon;?>">
             <br>
             <b>Purpose of the transaction: </b>
-            <input class="input-xxlarge" type="text" name="fmail2" value="<?echo $fmail2;?>">
+            <input class="input-xxlarge" type="text" name="ftran" value="<?echo $ftran;?>">
             <br>
             <b>Management Authority: </b>
-            <input class="input-xxlarge" type="text" name="fmail3" value="<?echo $fmail3;?>">
+            <input class="input-xxlarge" type="text" name="fau" value="<?echo $fau;?>">
             * according to database 7-12 is to be discuss later hot to implement<br>
             ** Note that according to the standard form number 13+14 should be fill by the officer<br>
             <br>
