@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <html lang="en"><head>
     <meta charset="utf-8">
     <title>TREX Corp.</title>
@@ -74,31 +73,31 @@
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
               <li class="nav-header"><h2>Form & Request</h2></li>
-              <li ><a href="#">การขึ้นทะเบียนสถานที่เพาะเลี้ยงพืชอนุรักษ์ และ ยื่นบัญชีแสดงจำนวนพืชอนุรักษ์</a></li>
+              <li><a href="<? echo site_url("pages/trans1") ?>">การขึ้นทะเบียนสถานที่เพาะเลี้ยงพืชอนุรักษ์ และ ยื่นบัญชีแสดงจำนวนพืชอนุรักษ์</a></li>
               <br>
-              <li class="active"><a href="#">การยื่นคำขอต่างๆ ที่เกี่ยวข้องกับใบสำคัญการขึ้นทะเบียนสถานที่เพาะเลี้ยง และ บัญชีพืชอนุรักษ์</a></li>
+              <li class ="active"><a href="<? echo site_url("pages/trans2") ?>">การยื่นคำขอต่างๆ ที่เกี่ยวข้องกับใบสำคัญการขึ้นทะเบียนสถานที่เพาะเลี้ยง และ บัญชีพืชอนุรักษ์</a></li>
               <br>
-              <li><a href="#">การขออนุญาตนำเข้า และนำเข้าล่วงหน้าพืชอนุรักษ์และซากพืชของพืชอนุรักษ์
+              <li><a href="<? echo site_url("pages/trans3") ?>">การขออนุญาตนำเข้า และนำเข้าล่วงหน้าพืชอนุรักษ์และซากพืชของพืชอนุรักษ์
               ตามวงศ์และชนิดที่ระบุในบัญชี</a></li>
               <br>
-              <li><a href="#">การขอใบอนุญาตส่งออก และส่งออกล่วงหน้าพืชอนุรักษ์หรือซากพืชอนุรักษ์</a></li>
+              <li><a href="<? echo site_url("pages/trans4") ?>">การขอใบอนุญาตส่งออก และส่งออกล่วงหน้าพืชอนุรักษ์หรือซากพืชอนุรักษ์</a></li>
               <br>
-              <li><a href="#">การขออนุญาตนำผ่านพืชอนุรักษ์</a></li>
+              <li><a href="<? echo site_url("pages/trans5") ?>">การขออนุญาตนำผ่านพืชอนุรักษ์</a></li>
               <br>
-              <li><a href="#">การออกหนังสือรับรองการส่งออกพืชลูกผสม</a></li>
+              <li><a href="<? echo site_url("pages/trans6") ?>">การออกหนังสือรับรองการส่งออกพืชลูกผสม</a></li>
             </ul>
           </div><!--/.well -->
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
-              <li class="nav-header"><h2>Form Status</h2></li>
-              <li><a href="<? echo site_url("pages/status") ?>">คำขอล่าสุด</a></li>
+              <li class="nav-header"><a href="<? echo site_url("pages/stats_home") ?>">
+              <h2><font color="green">Form Status</h2></a></font></li>
             </ul>
           </div><!--/.well -->
         </div><!--/span-->
         <div class="span9">
           <div class="well">
             <h2>คำขอใบแทนใบ สำคัญการขึ้นทะเบียนสถานที่เพาะเลี้ยงพืชอนุรักษ์</h2><br><br>
-            <?php echo form_open("pages/preview13");?>
+            <?php echo form_open("pages/preview20");?>
 
             <?
               // check post if it is null value
@@ -133,7 +132,7 @@
               if(isset($_POST['fprovince'])) 
                 $fprovince = $_POST['fprovince'];
               else 
-                $ffprovince = '';
+                $fprovince = '';
               if(isset($_POST['fzipcode'])) 
                 $fzipcode = $_POST['fzipcode'];
               else 
@@ -173,7 +172,7 @@
               if(isset($_POST['fprovince2'])) 
                 $fprovince2 = $_POST['fprovince2'];
               else 
-                $ffprovince2 = '';
+                $fprovince2 = '';
               if(isset($_POST['fzipcode2'])) 
                 $fzipcode2 = $_POST['fzipcode2'];
               else 
@@ -198,8 +197,10 @@
                 $fcause = $_POST['fcause'];
               else 
                 $fcause = '';
+
+              
             ?>
-            <form action="" method="post">
+            
             <b>ข้าพเจ้า: </b><input class="input-xlarge" type="text" name="fname" value="<?echo $fname;?>"> <br>
             <b>วันเดือนปีเกิด: </b><input type="text" name="fbd" value="<?echo $fbd;?>"><br>
             <b>สัญชาติ: </b><input type="text" name="fnation" value="<?echo $fnation;?>"><br>
@@ -227,7 +228,7 @@
             <b>โทรสาร: </b><input type="text" name="ffax2" value="<?echo $ffax2;?>"><br>
             <br>
             <b>เหตุผลที่ขอรับใบแทน: </b><br>
-            <textarea cols="10" rows="5" type="text" name"fcause" value="<?echo $fcause;?>"></textarea>
+            <input type="text" name="fcause" value="<?echo $fcause;?>"><br>
 
 
              <table>
@@ -271,6 +272,3 @@
     <script src="assets/js/bootstrap-carousel.js"></script>
     <script src="assets/js/bootstrap-typeahead.js"></script>
 
-  
-
-=======

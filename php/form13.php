@@ -73,24 +73,24 @@
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
               <li class="nav-header"><h2>Form & Request</h2></li>
-              <li class="active"><a href="#">การขึ้นทะเบียนสถานที่เพาะเลี้ยงพืชอนุรักษ์ และ ยื่นบัญชีแสดงจำนวนพืชอนุรักษ์</a></li>
+              <li><a href="<? echo site_url("pages/trans1") ?>">การขึ้นทะเบียนสถานที่เพาะเลี้ยงพืชอนุรักษ์ และ ยื่นบัญชีแสดงจำนวนพืชอนุรักษ์</a></li>
               <br>
-              <li><a href="#">การยื่นคำขอต่างๆ ที่เกี่ยวข้องกับใบสำคัญการขึ้นทะเบียนสถานที่เพาะเลี้ยง และ บัญชีพืชอนุรักษ์</a></li>
+              <li><a href="<? echo site_url("pages/trans2") ?>">การยื่นคำขอต่างๆ ที่เกี่ยวข้องกับใบสำคัญการขึ้นทะเบียนสถานที่เพาะเลี้ยง และ บัญชีพืชอนุรักษ์</a></li>
               <br>
-              <li><a href="#">การขออนุญาตนำเข้า และนำเข้าล่วงหน้าพืชอนุรักษ์และซากพืชของพืชอนุรักษ์
+              <li class ="active"><a href="<? echo site_url("pages/trans3") ?>">การขออนุญาตนำเข้า และนำเข้าล่วงหน้าพืชอนุรักษ์และซากพืชของพืชอนุรักษ์
               ตามวงศ์และชนิดที่ระบุในบัญชี</a></li>
               <br>
-              <li><a href="#">การขอใบอนุญาตส่งออก และส่งออกล่วงหน้าพืชอนุรักษ์หรือซากพืชอนุรักษ์</a></li>
+              <li><a href="<? echo site_url("pages/trans4") ?>">การขอใบอนุญาตส่งออก และส่งออกล่วงหน้าพืชอนุรักษ์หรือซากพืชอนุรักษ์</a></li>
               <br>
-              <li><a href="#">การขออนุญาตนำผ่านพืชอนุรักษ์</a></li>
+              <li><a href="<? echo site_url("pages/trans5") ?>">การขออนุญาตนำผ่านพืชอนุรักษ์</a></li>
               <br>
-              <li><a href="#">การออกหนังสือรับรองการส่งออกพืชลูกผสม</a></li>
+              <li><a href="<? echo site_url("pages/trans6") ?>">การออกหนังสือรับรองการส่งออกพืชลูกผสม</a></li>
             </ul>
           </div><!--/.well -->
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
-              <li class="nav-header"><h2>Form Status</h2></li>
-              <li><a href="<? echo site_url("pages/status") ?>">คำขอล่าสุด</a></li>
+              <li class="nav-header"><a href="<? echo site_url("pages/stats_home") ?>">
+              <h2><font color="green">Form Status</h2></a></font></li>
             </ul>
           </div><!--/.well -->
         </div><!--/span-->
@@ -114,10 +114,10 @@
                 $fname = $_POST['fname'];
               else 
                 $fname = '';
-              if(isset($_POST['fage'])) 
-                $fage = $_POST['fage'];
+              if(isset($_POST['fbd'])) 
+                $fbd = $_POST['fbd'];
               else 
-                $fage = '';
+                $fbd = '';
               if(isset($_POST['fnation'])) 
                 $fnation = $_POST['fnation'];
               else 
@@ -160,11 +160,11 @@
                 $fdel = '';
 
             ?>
-            <!-- <form action="" method="post"> -->
+            <input type="hidden" name="request" value="<?echo $request;?>">
             <b>เขียนที่ (Place): </b><input class="input-xlarge" type="text" name="fplace" value="<?echo $fplace;?>"><br>
             <b>วันที่ (Date): </b><input type="text" name="fdate" value="<?echo $fdate;?>"><br>
             <b>ข้าพเจ้า (Mr./Mrs./Miss): </b><input class="input-xlarge" type="text" name="fname" value="<?echo $fname;?>"><br>
-            <b>อายุ (Age): </b><input type="text" name="fage" value="<?echo $fage;?>"><b>ปี</b><br> 
+            <b>วันเดือนปีเกิด: </b><input type="text" name="fbd" value="<?echo $fbd;?>"><b>ปี</b><br> 
             <b>สัญชาติ (Nationality): </b><input type="text" name="fnation" value="<?echo $fnation;?>"><br>
             <b>ที่อยู่ (Address): </b><input class="input-xxlarge" type="text" name="faddress" value="<?echo $faddress;?>"><br>
             <b>ขอรับหนังสืออนุญาต (เขียนเครื่องหมาย / ในช่อง[ ] ตามประเภทหนังสืออนุญาตที่ขอ)</b>

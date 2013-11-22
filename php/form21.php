@@ -74,41 +74,41 @@
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
               <li class="nav-header"><h2>Form & Request</h2></li>
-              <li class="active"><a href="#">การขึ้นทะเบียนสถานที่เพาะเลี้ยงพืชอนุรักษ์ และ ยื่นบัญชีแสดงจำนวนพืชอนุรักษ์</a></li>
+              <li><a href="<? echo site_url("pages/trans1") ?>">การขึ้นทะเบียนสถานที่เพาะเลี้ยงพืชอนุรักษ์ และ ยื่นบัญชีแสดงจำนวนพืชอนุรักษ์</a></li>
               <br>
-              <li><a href="#">การยื่นคำขอต่างๆ ที่เกี่ยวข้องกับใบสำคัญการขึ้นทะเบียนสถานที่เพาะเลี้ยง และ บัญชีพืชอนุรักษ์</a></li>
+              <li class ="active"><a href="<? echo site_url("pages/trans2") ?>">การยื่นคำขอต่างๆ ที่เกี่ยวข้องกับใบสำคัญการขึ้นทะเบียนสถานที่เพาะเลี้ยง และ บัญชีพืชอนุรักษ์</a></li>
               <br>
-              <li><a href="#">การขออนุญาตนำเข้า และนำเข้าล่วงหน้าพืชอนุรักษ์และซากพืชของพืชอนุรักษ์
+              <li><a href="<? echo site_url("pages/trans3") ?>">การขออนุญาตนำเข้า และนำเข้าล่วงหน้าพืชอนุรักษ์และซากพืชของพืชอนุรักษ์
               ตามวงศ์และชนิดที่ระบุในบัญชี</a></li>
               <br>
-              <li><a href="#">การขอใบอนุญาตส่งออก และส่งออกล่วงหน้าพืชอนุรักษ์หรือซากพืชอนุรักษ์</a></li>
+              <li><a href="<? echo site_url("pages/trans4") ?>">การขอใบอนุญาตส่งออก และส่งออกล่วงหน้าพืชอนุรักษ์หรือซากพืชอนุรักษ์</a></li>
               <br>
-              <li><a href="#">การขออนุญาตนำผ่านพืชอนุรักษ์</a></li>
+              <li><a href="<? echo site_url("pages/trans5") ?>">การขออนุญาตนำผ่านพืชอนุรักษ์</a></li>
               <br>
-              <li><a href="#">การออกหนังสือรับรองการส่งออกพืชลูกผสม</a></li>
+              <li><a href="<? echo site_url("pages/trans6") ?>">การออกหนังสือรับรองการส่งออกพืชลูกผสม</a></li>
             </ul>
-           </div><!--/.well -->
+          </div><!--/.well -->
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
-              <li class="nav-header"><h2>Form Status</h2></li>
-              <li><a href="<? echo site_url("pages/status") ?>">คำขอล่าสุด</a></li>
+              <li class="nav-header"><a href="<? echo site_url("pages/stats_home") ?>">
+              <h2><font color="green">Form Status</h2></a></font></li>
             </ul>
           </div><!--/.well -->
         </div><!--/span-->
         <div class="span9">
           <div class="well">
             <h2>คำขอแก้ไขรายการใบสำคัญการขึ้นทะเบียน เพิ่ม/ลด สถานที่เพาะเลี้ยงพืชอนุรักษ์</h2><br><br>
-            <?php echo form_open("pages/save21");?>
+            <?php echo form_open("pages/preview21");?>
             <?
               // check post if it is null value
               if(isset($_POST['fname'])) 
                 $fname = $_POST['fname'];
               else 
                 $fname = '';
-              if(isset($_POST['fage'])) 
-                $fage = $_POST['fage'];
+              if(isset($_POST['fbd'])) 
+                $fbd = $_POST['fbd'];
               else 
-                $fage = '';
+                $fbd = '';
               if(isset($_POST['fnation'])) 
                 $fnation = $_POST['fnation'];
               else 
@@ -262,7 +262,7 @@
             ?>
 
             <b>ข้าพเจ้า: </b><input class="input-xlarge" type="text" name="fname" value="<?echo $fname;?>"><br>
-            <b>อายุ: </b><input type="text" name="fage" value="<?echo $fage;?>"><br>
+            <b>วันเดือนปีเกิด: </b><input type="text" name="fbd" placeholder="dd/mm/yyyy" value="<?echo $fbd;?>"><br>
             <b>สัญชาติ: </b><input type="text" name="fnation" value="<?echo $fnation;?>"><br>
             <b>บัตรประจำตัวประชาชน / ใบสำคัญประจำตัวคนต่างด้าว เลขที่: </b><input class="input-xlarge" type="text" name="fpassport" value="<?echo $fpassport;?>"><br>
             <b>ออกให้ ณ: </b><input type="text" name="fissue" value="<?echo $fissue;?>"><br>
@@ -282,13 +282,13 @@
             <b>โทรศัพท์: </b><input type="text" name="ftel2" value="<?echo $ftel2;?>"><br>
             <b>โทรศัพท์เคลื่อนที่: </b><input type="text" name="fphone2" value="<?echo $fphone2;?>">
             <b>โทรสาร: </b><input type="text" name="ffax2" value="<?echo $ffax2;?>"><br>
-            <b>ใบสำคัญการขึ้นทะเบียนสถานที่เพาะเลี้ยงพืชอนุรักษ์เลขทะเบียนที่: </b><input type="text" name="fregisNum"><br>
+            <b>ใบสำคัญการขึ้นทะเบียนสถานที่เพาะเลี้ยงพืชอนุรักษ์เลขทะเบียนที่</b><input type="text" name="fregisNum"><br>
             <br>
             <br>
             <input type="checkbox" name="ffix" value="fix">ขอแก้ไขรายการใบสำคัญการขึ้นทะเบียนสถานที่เพาะเลี้ยงพืชอนุรักษ์ดังกล่าวดังนี้<br>
             <input type="text" name="ffixtext"><br>
             <br><br>
-            <input type="checkbox" name="fincordec" value="incordec">พิ่ม/ลด สถานที่เพาะเลี้ยงพืชอนุรักษ์ ดังนี้<br>
+            <input type="checkbox" name="fincordec" value="incordec">เพิ่ม/ลด สถานที่เพาะเลี้ยงพืชอนุรักษ์ ดังนี้<br>
             <br>
             <br>
             <b>สถานที่เพาะเลี้ยงอนุรักษ์ ชื่อ: </b><input class="input-xlarge" type="text" name="fname3" value="<?echo $fname3;?>"><br>
@@ -310,15 +310,26 @@
             <br>
             <br>
             <br>
-            <b>ใบสำคัญเลขที่: </b><input type="text" name="fimnum" value="<?echo $fimnum;?>"><br>
+            <b>ใบสำคัญเลขที่</b><input type="text" name="fimnum" value="<?echo $fimnum;?>"><br>
             <br>
-            <b>ออกให้เมื่อวันที: ่</b><input type="date" name="fformdate" value="<?echo $fformdate;?>"><br>
-            <b>สิ้นอายุในวันที่: </b><input type="date" name="fformenddate" value="<?echo $fformenddate;?>"><br>
+            <b>ออกให้เมื่อวันที่</b><input type="date" name="fformdate" value="<?echo $fformdate;?>"><br>
+            <b>สิ้นอายุเมื่อวันที่</b><input type="date" name="fformenddate" value="<?echo $fformenddate;?>"><br>
+            <input type="hidden" name="request" value="$request">
             <br>
             <br>
-            <button type="submit" class="btn btn-large btn-primary">Submit</button>
+            <table>
+            <tr>
+              <td>
+            <button type="submit" class="btn btn-large btn-primary" >Submit</button>
+            <?php echo form_close(); ?>
+              </td>
+              <td>
+            <?php echo form_open("pages");?><br>
             <button type="cancel" class="btn btn-large">Cancel</button>
-            </form>
+            <?php echo form_close(); ?>
+              </td>
+            </tr>
+            <table>
           </div>
           
       </div><!--/row-->

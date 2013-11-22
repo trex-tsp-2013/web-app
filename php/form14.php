@@ -138,11 +138,7 @@
               else 
                 $ftran = '';
               if(isset($_POST['fau'])) 
-<<<<<<< HEAD
                 $fau = $_POST['fau'];
-=======
-                $fau = $form14['fau'];
->>>>>>> f7903760826de8d454a219f6f542ec849f6d31f1
               else 
                 $fau = '';
               
