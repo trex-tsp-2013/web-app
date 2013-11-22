@@ -281,15 +281,15 @@
             <b>หมายเหตุ</b>
             <br>
             <br>
-            <?if($form15['status']!='Verified'){?>
-            <?php echo form_open("form15/update11");?>
-            <textarea rows="5" name="comment"><?php echo $form15['comment']; ?></textarea>
+            <?if($form20['status']!='Verified'){?>
+            <?php echo form_open("form20/update11");?>
+            <textarea rows="5" name="comment"><?php echo $form20['comment']; ?></textarea>
             <br>
             <br>
             <table>
             <tr>
             <td width="30%">
-              <input type="hidden" name="form15_Id" value="<?echo $form15["form15_Id"];?>">
+              <input type="hidden" name="form20_Id" value="<?echo $form20["form20_Id"];?>">
               <input type="submit" class="btn btn-large btn-success" name="stat" value="Verified">
             </td>
             <td width="30%">
